@@ -1,9 +1,9 @@
 const img = document.querySelector(".first__image");
 
 const arrImg = [
-  "/images/photo1.jpg",
-  "/images/photo3.jpg",
-  "/images/photo4.jpg",
+  "https://motsaroman.github.io/Web-resume/images/photo1.jpg",
+  "https://motsaroman.github.io/Web-resume/images/photo3.jpg",
+  "https://motsaroman.github.io/Web-resume/images/photo4.jpg",
 ];
 
 let currentIndex = 0;
