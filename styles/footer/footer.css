@@ -1,0 +1,61 @@
+.footer__container {
+  background-color: rgba(0, 10, 29, 0.979);
+  font-family: "Maven Pro", sans-serif;
+  color: white;
+  padding: 0 50px 0 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  margin: 30px 0 0 0;
+  position: relative;
+  font-size: 60px;
+}
+
+.name:before {
+  content: "";
+  width: 300px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: -80%;
+}
+.name:after {
+  content: "";
+  width: 300px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: -80%;
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .name:before {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: -60%;
+  }
+}
+@media (max-width: 768px) {
+  .name:after {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    right: -60%;
+  }
+}

@@ -1,0 +1,256 @@
+.header {
+  background-color: rgb(0, 0, 0);
+  font-family: "Maven Pro", sans-serif;
+}
+.header__container {
+  color: white;
+  font-family: "Maven Pro", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+  position: relative;
+}
+.burger__navbar {
+  width: 300px;
+  height: 400px;
+  transform: translateX(400px);
+  position: absolute;
+  top: 140px;
+  right: 0px;
+  background-color: rgba(55, 0, 255, 0.829);
+  display: none;
+  z-index: 10;
+}
+.burger__navbar.active {
+  transform: translateX(0px);
+  display: block;
+}
+
+.burger__navbar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.burger__navbar-menu.active {
+  display: none;
+}
+.burger__navbar_list {
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.493);
+  padding: 20px;
+  list-style: none;
+  margin-top: 15px;
+  width: 250px;
+}
+.burger__navbar_list:hover {
+  background-color: rgba(0, 255, 255, 0.342);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  font-size: 20px;
+  font-family: "Maven Pro", sans-serif;
+  margin-left: 50px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .logo__img {
+    width: 50px;
+  }
+}
+@media (max-width: 425px) {
+  .logo__img {
+    width: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) {
+  .logo {
+    font-size: 10px;
+  }
+}
+.logo:hover {
+  animation: logotype 2s linear;
+}
+@keyframes logotype {
+  50% {
+    transform: translateX(0px);
+  }
+  70% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.navbar {
+  display: flex;
+  list-style: none;
+  margin-right: 50px;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    list-style: none;
+    margin-right: 0px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 425px) {
+  .navbar {
+    display: none;
+  }
+}
+.navbar__list {
+  margin-right: 30px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.navbar__list:hover {
+  color: rgba(0, 255, 234, 0.774);
+  transition: linear 0.4s;
+  border-bottom: 1px solid white;
+}
+.burger {
+  position: relative;
+  width: 100px;
+  display: none;
+}
+@media (max-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  .burger {
+    display: block;
+  }
+}
+.burger span {
+  width: 50px;
+  height: 2.5px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.burger span:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: -8px;
+  display: block;
+  transition: linear 0.1s;
+}
+.burger span:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 8px;
+  display: block;
+  transition: linear 0.1s;
+}
+.burger span.active {
+  background-color: black;
+}
+.burger span.active:before {
+  content: "";
+  transform: translateY(0px) rotate(45deg);
+}
+.burger span.active:after {
+  content: "";
+  transform: translateY(-15px) rotate(-45deg);
+}
+.title {
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  position: relative;
+  background-image: url("/images/backImg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-bottom: 3px solid white;
+}
+
+.title__photo {
+  border-radius: 50%;
+  transition: ease-in 0.3s;
+}
+
+.title__photo:hover {
+  transform: scale(1.3, 1.3);
+  transition: ease-in 0.3s;
+}
+h1,
+h2 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+.title__social-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.title__social-list_icons {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.github {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.gmail {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid black;
+}
+.vk {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid black;
+}
+
+h3 {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 120px;
+  font-weight: 700;
+  color: white;
+  transform: translateX(1500px);
+  transition: all 1s;
+}
+h3.active {
+  transform: translateX(0px);
+}
+@media (max-width: 425px) {
+  h3 {
+    font-size: 30px;
+  }
+}
